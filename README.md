@@ -14,8 +14,6 @@ Windows 上的 ANSYS Fluent **2022 R1 / v221** TUI 执行、观察、诊断和�
 
 **返回提示符不等于 CFD 结果正确。** 例如 patch 后仍应读取实际字段报告验证目标值。未知错误由 Codex 基于当前上下文提出修正假设；脚本不承诺任意报错都能自动修复。
 
-已在一台 Windows 工作站的真实 v221 上验证 PIPE、Journal、错误路径恢复及小型 patch/rollback。ConPTY 已实现，但该工作站未通过探测；长时间求解、GUI 和多 rank MPI 尚未验证。详见测试报告。
-
 ## 获取代码
 
 ```powershell
