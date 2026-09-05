@@ -4,9 +4,9 @@ Author: Manuel Sun
 
 简体中文 | [English](README.en.md)
 
-[架构与设计](docs/ARCHITECTURE.md) · [测试范围](TEST_REPORT.md) · [类似项目比较](docs/RELATED_PROJECTS.md)
+[架构与设计](docs/ARCHITECTURE.md) · [测试范围](TEST_REPORT.md)
 
-Windows 上的 ANSYS Fluent **2022 R1 / v221** TUI 执行、观察、诊断和有限修正 Skill。使用真实 Fluent 进程与 console/transcript；不使用 PyFluent。测试结论和范围见 [TEST_REPORT.md](TEST_REPORT.md)。
+针对 Windows 上的 ANSYS Fluent **2022 R1 / v221** TUI 执行、观察、诊断和有限修正 Skill。使用真实 Fluent 进程与 console/transcript；不使用 PyFluent；其他版本未进行测试。测试结论和范围见 [TEST_REPORT.md](TEST_REPORT.md)。
 
 ## 项目定位
 
@@ -14,7 +14,7 @@ Windows 上的 ANSYS Fluent **2022 R1 / v221** TUI 执行、观察、诊断和�
 
 **返回提示符不等于 CFD 结果正确。** 例如 patch 后仍应读取实际字段报告验证目标值。未知错误由 Codex 基于当前上下文提出修正假设；脚本不承诺任意报错都能自动修复。
 
-## 获取代码
+## 获取skill
 
 ```powershell
 git clone https://github.com/Ivan1853/fluent-tui-agent.git
@@ -143,7 +143,6 @@ python tests\integration_fluent.py --config config\fluent_config.json
 
 - [架构和修正边界](docs/ARCHITECTURE.md)：状态机、backend、证据与恢复策略。
 - [API 与计划 schema](references/api_and_plans.md)：交互计划、响应类型、Journal 事务。
-- [类似项目调研](docs/RELATED_PROJECTS.md)：已有 Fluent Skill/MCP 的定位与版本差异。
 - [文件树](FILE_TREE.txt)：发布文件清单。
 
 本项目是独立的社区工具，与 Ansys 或 OpenAI 无隶属关系。项目名称中的 ANSYS、Fluent 和 Codex 用于标识兼容目标。
