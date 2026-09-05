@@ -1,0 +1,23 @@
+# Author: Manuel Sun
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+config/*.json
+!config/fluent_config.example.json
+config/*.start-lock
+*.session.json
+logs/*
+!logs/.gitkeep
+validation/
+*.log
+*.trn
+*.cas
+*.dat
+*.cas.h5
+*.dat.h5
+*.lic
+*.pem
+*.key

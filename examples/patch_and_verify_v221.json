@@ -1,0 +1,69 @@
+{
+  "author": "Manuel Sun",
+  "id": "open-fixture-patch-and-verify",
+  "notes": "Validated on the included v221 pressure-outlet test fixture. Current-case prompt matching and physical verification are mandatory.",
+  "steps": [
+    {
+      "id": "patch-pressure",
+      "risk": "LOW_RISK",
+      "retry": true,
+      "expect": "prompt",
+      "inputs": [
+        {
+          "command": "/solve/patch"
+        },
+        {
+          "command": "fluid_nozzle",
+          "kind": "response",
+          "expect_prompt": "cell zone id/name\\(1\\)"
+        },
+        {
+          "command": "",
+          "kind": "response",
+          "expect_prompt": "cell zone id/name\\(2\\)"
+        },
+        {
+          "command": "pressure",
+          "kind": "response",
+          "expect_prompt": "Variable>"
+        },
+        {
+          "command": "486540",
+          "kind": "response",
+          "expect_prompt": "^Value"
+        }
+      ]
+    },
+    {
+      "id": "verify-pressure",
+      "risk": "READ_ONLY",
+      "risk_evidence": "Observed volume-average report, no file output",
+      "inputs": [
+        {
+          "command": "/report/volume-integrals/volume-avg"
+        },
+        {
+          "command": "fluid_nozzle",
+          "kind": "response",
+          "expect_prompt": "cell zone id/name\\(1\\)"
+        },
+        {
+          "command": "",
+          "kind": "response",
+          "expect_prompt": "cell zone id/name\\(2\\)"
+        },
+        {
+          "command": "pressure",
+          "kind": "response",
+          "expect_prompt": "volume-average of>"
+        },
+        {
+          "command": "no",
+          "kind": "response",
+          "expect_prompt": "Write to File"
+        }
+      ],
+      "verify_output_regex": "fluid_nozzle\\s+486540"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "author": "Manuel Sun",
+  "id": "safe-path-recovery-test",
+  "steps": [
+    {"id": "good", "command": "/report/system/sys-stats", "verify_output_regex": "Hostname|CPU"},
+    {"id": "typo", "command": "/report/system/sys-stat", "risk": "READ_ONLY", "risk_evidence": "The intended command is the read-only sys-stats report; this test changes only its terminal token.", "retry": true, "verify_output_regex": "Hostname|CPU"}
+  ]
+}

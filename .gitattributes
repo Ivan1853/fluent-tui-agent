@@ -1,0 +1,6 @@
+# Author: Manuel Sun
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jou text eol=lf

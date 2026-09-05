@@ -1,0 +1,43 @@
+Author: Manuel Sun
+
+fluent-tui-agent/
+  .gitattributes
+  .gitignore
+  FILE_TREE.txt
+  README.en.md
+  README.md
+  SKILL.md
+  TEST_REPORT.md
+  agents/openai.yaml
+  config/fluent_config.example.json
+  docs/ARCHITECTURE.md
+  docs/RELATED_PROJECTS.md
+  examples/basic_tui.json
+  examples/error_recovery_example.md
+  examples/initialization_example.jou
+  examples/patch_and_verify_v221.json
+  examples/patch_example.jou
+  examples/patch_plan.json
+  examples/patch_plan_v221_observed.json
+  examples/recovery_plan.json
+  examples/safe_query.jou
+  logs/.gitkeep
+  references/api_and_plans.md
+  references/error_patterns.md
+  references/fluent_2022r1_tui_notes.md
+  references/tui_interaction_rules.md
+  scripts/__init__.py
+  scripts/fluent_common.py
+  scripts/fluent_discovery.py
+  scripts/fluent_driver.py
+  scripts/fluent_error_analyzer.py
+  scripts/fluent_parser.py
+  scripts/fluent_process.py
+  scripts/fluent_session.py
+  scripts/journal_runner.py
+  scripts/windows_conpty.py
+  tests/fake_fluent.py
+  tests/fixtures/unit_cube.msh
+  tests/fixtures/unit_cube_open.msh
+  tests/integration_fluent.py
+  tests/test_agent.py

@@ -1,0 +1,8 @@
+{
+  "author": "Manuel Sun",
+  "id": "system-inspection",
+  "steps": [
+    {"id": "system", "command": "/report/system/sys-stats", "expect": "prompt", "verify_output_regex": "Hostname|CPU", "retry": true},
+    {"id": "root-menu", "command": "", "kind": "menu_control", "expect": "prompt", "verify_output_regex": "report/|sys-stats", "retry": false}
+  ]
+}

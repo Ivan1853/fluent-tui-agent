@@ -1,0 +1,7 @@
+# Author: Manuel Sun
+interface:
+  display_name: "Fluent TUI Agent"
+  short_description: "Execute and repair Fluent 2022 R1 TUI with real feedback"
+  default_prompt: "Use $fluent-tui-agent to execute this Fluent 2022 R1 task, observe each real prompt, and diagnose failures before a bounded retry."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,17 @@
+; Author: Manuel Sun
+; Recorded v221 variant for the included initialized pressure-outlet fixture.
+; PRECONDITION: appropriate initialized case/data already loaded in this transaction.
+; Not universal: verify current-case prompts before reusing this journal.
+; This fixture has no CFF prompt. Blank line below ends its cell-zone list.
+; Pressure is gauge/static pressure [Pa]; a closed-domain reference may offset it.
+/solve/patch
+fluid_nozzle
+
+pressure
+486540
+; Verify the actual field, not only command acceptance.
+/report/volume-integrals/volume-avg
+fluid_nozzle
+
+pressure
+no

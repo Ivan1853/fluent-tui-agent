@@ -1,0 +1,29 @@
+(0 "One-cell pressure-boundary fixture; no engineering validation. Author: Manuel Sun")
+(2 3)
+(10 (0 1 8 0 3))
+(10 (1 1 8 1 3)(
+0 0 0
+1 0 0
+1 1 0
+0 1 0
+0 0 1
+1 0 1
+1 1 1
+0 1 1
+))
+(12 (0 1 1 0))
+(12 (2 1 1 1 4))
+(13 (0 1 6 0))
+(13 (3 1 5 3 4)(
+2 3 4 1 1 0
+8 7 6 5 1 0
+5 6 2 1 1 0
+6 7 3 2 1 0
+7 8 4 3 1 0
+))
+(13 (4 6 6 5 4)(
+8 5 1 4 1 0
+))
+(45 (2 fluid fluid_nozzle)())
+(45 (3 wall walls)())
+(45 (4 pressure-outlet outlet)())

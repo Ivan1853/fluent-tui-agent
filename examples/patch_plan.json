@@ -1,0 +1,21 @@
+{
+  "author": "Manuel Sun",
+  "id": "observed-patch-example",
+  "notes": "The user-specified synthetic prompt sequence. Confirm against current v221; if a register or other prompt appears, stop and amend only that input. Enter at zone(2) is an explicit case-specific choice, not inferred from [()].",
+  "steps": [
+    {
+      "id": "patch-pressure",
+      "risk": "LOW_RISK",
+      "retry": true,
+      "expect": "prompt",
+      "inputs": [
+        {"command": "/solve/patch"},
+        {"command": "fluid_nozzle", "kind": "response", "expect_prompt": "cell zone id/name\\(1\\)"},
+        {"command": "", "kind": "response", "expect_prompt": "cell zone id/name\\(2\\)"},
+        {"command": "pressure", "kind": "response", "expect_prompt": "Variable>"},
+        {"command": "no", "kind": "response", "expect_prompt": "Use Custom Field Function"},
+        {"command": "486540", "kind": "response", "expect_prompt": "^Value"}
+      ]
+    }
+  ]
+}

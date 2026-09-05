@@ -1,0 +1,5 @@
+; Author: Manuel Sun
+; PRECONDITION: an appropriate case/mesh is already loaded in this transaction.
+; This changes solution state. Reinitializing an existing valid solution is destructive.
+; Observe the real output and verify the initialized fields before continuing.
+/solve/initialize/initialize-flow
